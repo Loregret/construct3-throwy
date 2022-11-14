@@ -1,0 +1,48 @@
+{
+	"name": "ui_lock_icon",
+	"plugin-id": "Sprite",
+	"sid": 627363585561309,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 908846150852916
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 336179303020006
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 37,
+						"height": 44,
+						"originX": 0.47297297297297297,
+						"originY": 0.5340909090909091,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6069231,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 732788394726216,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

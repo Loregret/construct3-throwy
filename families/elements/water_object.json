@@ -1,0 +1,12 @@
+{
+	"name": "water_object",
+	"plugin-id": "Sprite",
+	"sid": 637615993712982,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"player",
+		"whale"
+	]
+}

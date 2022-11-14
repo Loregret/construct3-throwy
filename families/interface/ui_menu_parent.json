@@ -1,0 +1,20 @@
+{
+	"name": "ui_menu_parent",
+	"plugin-id": "Sprite",
+	"sid": 456566730256828,
+	"instanceVariables": [
+		{
+			"name": "is_parent",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 127317045704897
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"ui_wooden_bg",
+		"ui_menu_black_box"
+	]
+}

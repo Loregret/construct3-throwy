@@ -1,0 +1,51 @@
+{
+	"name": "ui_skip_button",
+	"plugin-id": "Sprite",
+	"sid": 468309359300288,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "repeatCounter",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 273810663650264
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 414973679439636
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.4596774193548387,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8339012,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 893835563591131,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

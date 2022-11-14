@@ -1,0 +1,70 @@
+{
+	"name": "star",
+	"plugin-id": "Sprite",
+	"sid": 740339704527416,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "is_taken",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 902190442187996
+		},
+		{
+			"name": "startX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 570906165420857
+		},
+		{
+			"name": "startY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 650932930322589
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 498740930937165
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 913510784397563
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 35,
+						"height": 35,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 103085,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 974407395445613,
+				"name": "stars",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

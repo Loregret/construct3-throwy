@@ -1,0 +1,1374 @@
+{
+	"name": "#functions",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global functions - menu",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "ui_window_control",
+					"functionDescription": "",
+					"functionCategory": "#interface",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "window_name",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 591312033576908
+						},
+						{
+							"name": "action",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 402502123030853
+						},
+						{
+							"name": "duration",
+							"type": "number",
+							"initialValue": "0.5",
+							"comment": "",
+							"sid": 138885087663940
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 785603686683515,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 750936089149618,
+									"parameters": {
+										"variable": "action",
+										"comparison": 0,
+										"value": "\"show\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 187410202095448,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "main menu"
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 120902975847795,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 381723074201875,
+													"parameters": {
+														"variable": "window_name",
+														"comparison": 0,
+														"value": "\"levels\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 283378212811994,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-on-layer",
+															"objectClass": "ui_wooden_bg",
+															"sid": 419638788085216,
+															"parameters": {
+																"layer": "\"levels\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 485818325502820,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-playing",
+																	"objectClass": "ui_wooden_bg",
+																	"sid": 436642697269584,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"Show\""
+																	},
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-layer-visible",
+																	"objectClass": "System",
+																	"sid": 148066038854664,
+																	"parameters": {
+																		"layer": "\"levels\"",
+																		"visibility": "visible"
+																	}
+																},
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "ui_wooden_bg",
+																	"sid": 896019723902439,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"Show\"",
+																		"property": "offsetY",
+																		"end-value": "271",
+																		"time": "duration",
+																		"ease": "easeoutback",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no"
+																	}
+																}
+															],
+															"sid": 200024302508728
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 832433372455670,
+													"parameters": {
+														"variable": "window_name",
+														"comparison": 0,
+														"value": "\"play\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 763257860810730,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ui_button",
+															"sid": 781113615604808,
+															"parameters": {
+																"instance-variable": "class",
+																"comparison": 0,
+																"value": "\"play\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 472347339557712,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-playing",
+																	"objectClass": "ui_button",
+																	"sid": 936305505049587,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"opacity\""
+																	},
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "ui_button",
+																	"sid": 678478227063452,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"opacity\"",
+																		"property": "offsetOpacity",
+																		"end-value": "100",
+																		"time": "duration",
+																		"ease": "easeinoutback",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no"
+																	}
+																}
+															],
+															"sid": 541385299373135
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "game"
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 441633011287356,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 254363977240469,
+													"parameters": {
+														"variable": "window_name",
+														"comparison": 0,
+														"value": "\"win_menu\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 905138532080974,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ui_menu_black_box",
+															"sid": 708320949852807,
+															"parameters": {
+																"instance-variable": "class",
+																"comparison": 0,
+																"value": "\"win_menu\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "tween-one-property",
+															"objectClass": "ui_menu_black_box",
+															"sid": 795171795415196,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"Y\"",
+																"property": "offsetY",
+																"end-value": "240",
+																"time": "duration",
+																"ease": "easeoutexpo",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no"
+															}
+														}
+													],
+													"sid": 765158002221869
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 111836430522459,
+									"parameters": {
+										"variable": "action",
+										"comparison": 0,
+										"value": "\"hide\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 111995224270575,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "main menu"
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 681806317223997,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 450947059320210,
+													"parameters": {
+														"variable": "window_name",
+														"comparison": 0,
+														"value": "\"levels\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 964630243659612,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-on-layer",
+															"objectClass": "ui_wooden_bg",
+															"sid": 763101877153858,
+															"parameters": {
+																"layer": "\"levels\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 251553250256624,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-playing",
+																	"objectClass": "ui_wooden_bg",
+																	"sid": 839727230431475,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"Hide\""
+																	},
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "ui_wooden_bg",
+																	"sid": 350983347901134,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"Hide\"",
+																		"property": "offsetY",
+																		"end-value": "800",
+																		"time": "duration",
+																		"ease": "easeinoutback",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 591458182299221,
+																	"parameters": {
+																		"seconds": "duration"
+																	}
+																},
+																{
+																	"id": "set-layer-visible",
+																	"objectClass": "System",
+																	"sid": 300838926452159,
+																	"parameters": {
+																		"layer": "\"levels\"",
+																		"visibility": "invisible"
+																	}
+																}
+															],
+															"sid": 593287718915827
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 279857052911985,
+													"parameters": {
+														"variable": "window_name",
+														"comparison": 0,
+														"value": "\"play\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 846616310567928,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ui_button",
+															"sid": 903741034456977,
+															"parameters": {
+																"instance-variable": "class",
+																"comparison": 0,
+																"value": "\"play\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 422469928932075,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-playing",
+																	"objectClass": "ui_button",
+																	"sid": 536580738801378,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"opacity\""
+																	},
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "tween-one-property",
+																	"objectClass": "ui_button",
+																	"sid": 880427152538536,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"opacity\"",
+																		"property": "offsetOpacity",
+																		"end-value": "0",
+																		"time": "duration",
+																		"ease": "easeinoutback",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 289149861792695,
+																	"parameters": {
+																		"seconds": "duration"
+																	}
+																},
+																{
+																	"id": "set-opacity",
+																	"objectClass": "ui_button",
+																	"sid": 420775156496384,
+																	"parameters": {
+																		"opacity": "0"
+																	}
+																}
+															],
+															"sid": 416312329177519
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "game"
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 377265206185683,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 216988715210324,
+													"parameters": {
+														"variable": "window_name",
+														"comparison": 0,
+														"value": "\"win_menu\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 332922986760237,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ui_menu_black_box",
+															"sid": 386378051938751,
+															"parameters": {
+																"instance-variable": "class",
+																"comparison": 0,
+																"value": "\"win_menu\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "tween-one-property",
+															"objectClass": "ui_menu_black_box",
+															"sid": 748736826585255,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"Y\"",
+																"property": "offsetY",
+																"end-value": "-600",
+																"time": "duration",
+																"ease": "easeinoutback",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no"
+															}
+														}
+													],
+													"sid": 514524466934667
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "ui_button_click_effect",
+					"functionDescription": "",
+					"functionCategory": "#interface",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "buttonUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 901553476732426
+						},
+						{
+							"name": "duration",
+							"type": "number",
+							"initialValue": "0.1",
+							"comment": "Длительность анимации (0.1 - по умолч.)",
+							"sid": 188122016629743
+						},
+						{
+							"name": "PlaySound",
+							"type": "boolean",
+							"initialValue": "true",
+							"comment": "",
+							"sid": 352315025697714
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 964226535597402,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 450571501347061,
+									"parameters": {
+										"variable": "PlaySound"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 481362432966355,
+									"parameters": {
+										"audio-file": "ui-click-1",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"click\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 210647790814136,
+									"parameters": {
+										"audio-file": "ui-click-2",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"click2\""
+									}
+								}
+							],
+							"sid": 516334320314089
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "ui_menu",
+									"sid": 247200364218887,
+									"parameters": {
+										"unique-id": "buttonUID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "ui_menu",
+									"sid": 483229555313018,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"size\"",
+										"property": "size",
+										"end-x": "Self.Width*0.8",
+										"end-y": "Self.Width*0.8",
+										"time": "duration",
+										"ease": "easeoutbounce",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "yes"
+									}
+								}
+							],
+							"sid": 945712455040120
+						}
+					]
+				},
+				{
+					"functionName": "ui_pin_menu_objects",
+					"functionDescription": "",
+					"functionCategory": "#interface",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "pin_group",
+							"type": "string",
+							"initialValue": "",
+							"comment": "Название группы для закрепления.",
+							"sid": 708303516789460
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 328130450704862,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ui_menu",
+									"sid": 197196552525325,
+									"parameters": {
+										"instance-variable": "pin_group",
+										"comparison": 0,
+										"value": "pin_group"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 305094063304319,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "ui_menu_parent",
+											"sid": 713542768355070,
+											"parameters": {
+												"unique-id": "ui_menu.UID"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "ui_menu_parent",
+											"sid": 402215293654109,
+											"parameters": {
+												"instance-variable": "is_parent"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 878485183644832,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 538586982596053,
+													"parameters": {
+														"object": "ui_menu"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 555820474805716,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "sprite object"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ui_menu",
+															"sid": 718182520293239,
+															"parameters": {
+																"instance-variable": "pin_group",
+																"comparison": 0,
+																"value": "pin_group"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "pin-to-object-properties",
+															"objectClass": "ui_menu",
+															"sid": 250028260401935,
+															"behaviorType": "Pin",
+															"parameters": {
+																"pin-to": "ui_menu_parent",
+																"x": true,
+																"y": true,
+																"angle": true,
+																"width-type": "no",
+																"height-type": "no",
+																"z": false
+															}
+														}
+													],
+													"sid": 980106057990236
+												},
+												{
+													"eventType": "comment",
+													"text": "sprfont"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ui_menu_spritefonts",
+															"sid": 966520516196613,
+															"parameters": {
+																"instance-variable": "pin_group",
+																"comparison": 0,
+																"value": "pin_group"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "pin-to-object-properties",
+															"objectClass": "ui_menu_spritefonts",
+															"sid": 416079017251018,
+															"behaviorType": "Pin",
+															"parameters": {
+																"pin-to": "ui_menu_parent",
+																"x": true,
+																"y": true,
+																"angle": true,
+																"width-type": "no",
+																"height-type": "no",
+																"z": false
+															}
+														}
+													],
+													"sid": 631383342009963
+												},
+												{
+													"eventType": "comment",
+													"text": "text"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ui_menu_text",
+															"sid": 660320741117722,
+															"parameters": {
+																"instance-variable": "pin_group",
+																"comparison": 0,
+																"value": "pin_group"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "pin-to-object-properties",
+															"objectClass": "ui_menu_text",
+															"sid": 664188984874651,
+															"behaviorType": "Pin",
+															"parameters": {
+																"pin-to": "ui_menu_parent",
+																"x": true,
+																"y": true,
+																"angle": true,
+																"width-type": "no",
+																"height-type": "no",
+																"z": false
+															}
+														}
+													],
+													"sid": 632744590619309
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 204252510542617
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global functions - miscellaneous",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "tween_machine_start",
+					"functionDescription": "",
+					"functionCategory": "#elements",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "tween_tag",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 903045899487356
+						},
+						{
+							"name": "start_value",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 242629890595759
+						},
+						{
+							"name": "end_value",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 931507302312527
+						},
+						{
+							"name": "duration",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 424246384039728
+						},
+						{
+							"name": "ease",
+							"type": "string",
+							"initialValue": "default",
+							"comment": "смотри, имеющиеся варианты, в списке.",
+							"sid": 340461026731783
+						},
+						{
+							"name": "ping_pong",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"sid": 319410680188946
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 447156500833160,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-playing",
+									"objectClass": "tween_machine",
+									"sid": 242506180615403,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "tween_tag"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 909496199216725,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 516903672526381,
+											"parameters": {
+												"variable": "ping_pong"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 916609355910956,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 900571991220936,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"default\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 195940350429058,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "yes"
+													}
+												}
+											],
+											"sid": 902919385287058
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 651375727256303
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 793940166684847,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"out back\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 708439540607447,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "easeoutbounce",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "yes"
+													}
+												}
+											],
+											"sid": 453206902802849
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 158860253795942
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 202557950141490,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"in out back\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 647507935294608,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "easeinoutback",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "yes"
+													}
+												}
+											],
+											"sid": 891916166559088
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 360857320170050
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 762464727826949,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"in out sinusoidal\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 356269171168629,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "easeinoutsine",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "yes"
+													}
+												}
+											],
+											"sid": 848944608149774
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 490485910151934
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 939574853284975,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"out exponentional\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 740585423158086,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "easeoutexpo",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "yes"
+													}
+												}
+											],
+											"sid": 701303509999065
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 879115976307808
+										}
+									],
+									"actions": [],
+									"sid": 498890378807985,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 836443063514356,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"default\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 346800473812178,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "default",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												}
+											],
+											"sid": 203075553771111
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 613862093575275
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 734318095744154,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"in out back\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 487469900413030,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "easeinoutback",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												}
+											],
+											"sid": 703014323911251
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 127580864495408
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 420741197915882,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"out back\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 455318819375010,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "easeoutbounce",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												}
+											],
+											"sid": 158388121374480
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 840058872139487
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 426316998181915,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"in out sinusoidal\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 993688480704640,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "easeinoutsine",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												}
+											],
+											"sid": 521078702558664
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 867394208180523
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 352319519025282,
+													"parameters": {
+														"variable": "ease",
+														"comparison": 0,
+														"value": "\"out exponentional\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-value",
+													"objectClass": "tween_machine",
+													"sid": 120734880394173,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "tween_tag",
+														"start-value": "start_value",
+														"end-value": "end_value",
+														"time": "duration",
+														"ease": "easeoutexpo",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												}
+											],
+											"sid": 950436547177008
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 344121654388087
+		}
+	],
+	"sid": 218179689895596
+}

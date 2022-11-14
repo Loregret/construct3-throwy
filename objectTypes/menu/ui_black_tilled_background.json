@@ -1,0 +1,32 @@
+{
+	"name": "ui_black_tilled_background",
+	"plugin-id": "TiledBg",
+	"sid": 601894556148825,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 25,
+		"height": 25,
+		"originX": 1.96,
+		"originY": 2.68,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 430199,
+		"collisionPoly": {
+			"points": [
+				0.24,
+				0.24,
+				0.76,
+				0.24,
+				0.76,
+				0.76,
+				0.24,
+				0.76
+			]
+		},
+		"useCollisionPoly": true
+	}
+}

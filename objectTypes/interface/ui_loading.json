@@ -1,0 +1,63 @@
+{
+	"name": "ui_loading",
+	"plugin-id": "Sprite",
+	"sid": 584956414209057,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 365000291864138
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 11482,
+						"collisionPoly": {
+							"points": [
+								0.1513671875,
+								0.1513671875,
+								0.5,
+								0.0078125,
+								0.8466796875,
+								0.15234375,
+								0.9912109375,
+								0.5,
+								0.84765625,
+								0.84765625,
+								0.5,
+								0.9921875,
+								0.1513671875,
+								0.84765625,
+								0.0078125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 651489699837665,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

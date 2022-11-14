@@ -1,0 +1,43 @@
+{
+	"name": "ui_star_icon",
+	"plugin-id": "Sprite",
+	"sid": 760347190808981,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 324674061364095
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 42,
+						"height": 42,
+						"originX": 0.5317460317460317,
+						"originY": 0.5158730158730159,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6552138,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 252765019786094,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

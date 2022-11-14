@@ -1,0 +1,87 @@
+{
+	"name": "ui_aiming_arrow",
+	"plugin-id": "Sprite",
+	"sid": 658400936841932,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "current_scale",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 782487165104734
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 681417354052036
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 69,
+						"height": 47,
+						"originX": -0.9420289855072463,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2367054,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.02127659574468085,
+								0.9855072463768116,
+								0.02127659574468085,
+								0.9855072463768116,
+								0.9787234042553191,
+								0,
+								0.9787234042553191
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 69,
+						"height": 47,
+						"originX": -0.9420289855072463,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9648713,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.02127659574468085,
+								0.9855072463768116,
+								0.02127659574468085,
+								0.9855072463768116,
+								0.9787234042553191,
+								0,
+								0.9787234042553191
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 770405952656723,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

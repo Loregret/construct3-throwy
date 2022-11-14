@@ -1,0 +1,235 @@
+{
+	"name": "#loading",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "#loader"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "#local storage"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "#advertisement"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "#gameanalytics"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-loader-layout-complete",
+					"objectClass": "System",
+					"sid": 157345217428645
+				}
+			],
+			"actions": [],
+			"sid": 590195600837175,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "loader fade"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 747924251720394,
+							"parameters": {
+								"seconds": "0.6"
+							}
+						},
+						{
+							"callFunction": "loader_show",
+							"sid": 375655900395752,
+							"parameters": [
+								"1"
+							]
+						}
+					],
+					"sid": 726183936568323
+				},
+				{
+					"eventType": "comment",
+					"text": "after fade - go to menu"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 572872987693113,
+							"parameters": {
+								"tag": "\"loader_finish\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 412089298545247,
+							"parameters": {
+								"layout": "menu"
+							}
+						}
+					],
+					"sid": 459551901231276
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 312293515429150
+				}
+			],
+			"actions": [],
+			"sid": 107628648960873,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "loader"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 971935752232047,
+							"parameters": {
+								"layer": "\"loader\"",
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 198929194150261
+				},
+				{
+					"eventType": "comment",
+					"text": "data"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "local_storage_load_data",
+							"sid": 433681434892539
+						}
+					],
+					"sid": 221575667622240
+				},
+				{
+					"eventType": "comment",
+					"text": "IAP"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-preview",
+							"objectClass": "System",
+							"sid": 982532846859155,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "register-product",
+							"objectClass": "MobileIAP",
+							"sid": 359391905795993,
+							"parameters": {
+								"product-id": "\"removeads\"",
+								"product-type": "non-consumable"
+							}
+						},
+						{
+							"id": "complete-registration",
+							"objectClass": "MobileIAP",
+							"sid": 857377485137249
+						}
+					],
+					"sid": 375495465854144
+				},
+				{
+					"eventType": "comment",
+					"text": "advertisement"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-preview",
+							"objectClass": "System",
+							"sid": 106565600926705,
+							"isInverted": true
+						},
+						{
+							"id": "product-owned",
+							"objectClass": "MobileIAP",
+							"sid": 988792772793849,
+							"parameters": {
+								"product-id": "\"removeads\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "adv_create_banner",
+							"sid": 176923661857031,
+							"parameters": [
+								false
+							]
+						},
+						{
+							"callFunction": "adv_create_reward_video",
+							"sid": 571928698469205,
+							"parameters": [
+								false
+							]
+						},
+						{
+							"callFunction": "adv_create_interstitial",
+							"sid": 376184076237285,
+							"parameters": [
+								false
+							]
+						}
+					],
+					"sid": 762003172752632
+				},
+				{
+					"eventType": "comment",
+					"text": "gameanalytics"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-preview",
+							"objectClass": "System",
+							"sid": 712656910946997,
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 709362453037831
+				}
+			]
+		}
+	],
+	"sid": 608635487999680
+}

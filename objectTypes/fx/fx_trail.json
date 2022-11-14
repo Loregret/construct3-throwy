@@ -1,0 +1,38 @@
+{
+	"name": "fx_trail",
+	"plugin-id": "Particles",
+	"sid": 367823747122466,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 344028341071349
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 40,
+		"height": 40,
+		"originX": 0.6375,
+		"originY": 0.5125,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 842246,
+		"collisionPoly": {
+			"points": [
+				0.2375,
+				0.2375,
+				0.7625,
+				0.2375,
+				0.7625,
+				0.7625,
+				0.2375,
+				0.7625
+			]
+		},
+		"useCollisionPoly": true
+	}
+}

@@ -1,0 +1,204 @@
+{
+	"name": "#loader",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Loader layout",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 260157963937787,
+							"parameters": {
+								"layer": "\"loader\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 377179656229211,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-playing",
+									"objectClass": "tween_machine",
+									"sid": 232201098132052,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"loader\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 472985672730731,
+									"parameters": {
+										"layer": "\"loader\"",
+										"opacity": "tween_machine.Tween.Value(\"loader\")"
+									}
+								}
+							],
+							"sid": 216467863417630
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tweens-finished",
+									"objectClass": "tween_machine",
+									"sid": 637042387476523,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"loader\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 907931869364177,
+									"parameters": {
+										"tag": "\"loader_finish\""
+									}
+								}
+							],
+							"sid": 982022707210145
+						}
+					]
+				},
+				{
+					"functionName": "loader_show",
+					"functionDescription": "",
+					"functionCategory": "#loader",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "duration",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 443147068823885
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 748814152887792,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 671678377786351,
+									"parameters": {
+										"layer": "\"loader\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 481505856377511,
+									"parameters": {
+										"layer": "\"loader\"",
+										"opacity": "0"
+									}
+								},
+								{
+									"callFunction": "tween_machine_start",
+									"sid": 480803430044928,
+									"parameters": [
+										"\"loader\"",
+										"0",
+										"100",
+										"duration",
+										"\"in out sinusoidal\"",
+										false
+									]
+								}
+							],
+							"sid": 657503134389863
+						}
+					]
+				},
+				{
+					"functionName": "loader_hide",
+					"functionDescription": "",
+					"functionCategory": "#loader",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "duration",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 978542426135003
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 914716699825355,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 983064893213821,
+									"parameters": {
+										"layer": "\"loader\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 600301689931790,
+									"parameters": {
+										"layer": "\"loader\"",
+										"opacity": "100"
+									}
+								},
+								{
+									"callFunction": "tween_machine_start",
+									"sid": 782475292271928,
+									"parameters": [
+										"\"loader\"",
+										"100",
+										"0",
+										"duration",
+										"\"in out sinusoidal\"",
+										false
+									]
+								}
+							],
+							"sid": 647335731546591
+						}
+					]
+				}
+			],
+			"sid": 820581790053835
+		}
+	],
+	"sid": 999804525440885
+}

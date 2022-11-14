@@ -1,0 +1,57 @@
+{
+	"name": "ui_circle",
+	"plugin-id": "Sprite",
+	"sid": 228603304982916,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 130,
+						"height": 127,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4926056,
+						"collisionPoly": {
+							"points": [
+								0.14615384615384616,
+								0.14960629921259844,
+								0.5,
+								0,
+								0.8461538461538461,
+								0.14960629921259844,
+								0.9923076923076923,
+								0.5,
+								0.8538461538461538,
+								0.8503937007874016,
+								0.5,
+								0.9921259842519685,
+								0.14615384615384616,
+								0.84251968503937,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 978019086086518,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

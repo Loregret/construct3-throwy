@@ -1,0 +1,50 @@
+{
+	"name": "ui_menu",
+	"plugin-id": "Sprite",
+	"sid": 523440271550427,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 114557320404727
+		},
+		{
+			"name": "class",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 325144104680370
+		},
+		{
+			"name": "pin_group",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 379083845064307
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 715995362474821
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 725359028374222
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"ui_button",
+		"ui_wooden_bg",
+		"ui_circle",
+		"ui_stars",
+		"ui_menu_black_box",
+		"ui_menu_button",
+		"ui_star_icon"
+	]
+}

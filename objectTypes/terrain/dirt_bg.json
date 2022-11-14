@@ -1,0 +1,20 @@
+{
+	"name": "dirt_bg",
+	"plugin-id": "TiledBg",
+	"sid": 823474524274749,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 45,
+		"height": 45,
+		"originX": 0.5111111111111111,
+		"originY": 0.5111111111111111,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 6137718,
+		"useCollisionPoly": true
+	}
+}

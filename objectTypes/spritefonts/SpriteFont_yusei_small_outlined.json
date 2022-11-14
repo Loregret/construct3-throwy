@@ -1,0 +1,20 @@
+{
+	"name": "SpriteFont_yusei_small_outlined",
+	"plugin-id": "Spritefont2",
+	"sid": 345531287331782,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 256,
+		"height": 1024,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3116515,
+		"useCollisionPoly": true
+	}
+}

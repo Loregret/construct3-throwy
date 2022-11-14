@@ -1,0 +1,101 @@
+{
+	"name": "#local storage",
+	"events": [
+		{
+			"functionName": "local_storage_load_data",
+			"functionDescription": "",
+			"functionCategory": "#local storage",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 968663901124380,
+					"parameters": {
+						"key": "\"data\""
+					}
+				}
+			],
+			"sid": 179550471678319
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 774387972036573,
+					"parameters": {
+						"key": "\"data\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 436094236798859,
+					"parameters": {
+						"key": "\"data\""
+					}
+				}
+			],
+			"sid": 727261528874841
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 706906749214119,
+					"parameters": {
+						"key": "\"data\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "data",
+					"sid": 594435937126984,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 374169336643669
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-missing",
+					"objectClass": "LocalStorage",
+					"sid": 915610108092967,
+					"parameters": {
+						"key": "\"data\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-key",
+					"objectClass": "data",
+					"sid": 285799377481200,
+					"parameters": {
+						"key": "\"stars\"",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 839977477948301
+		}
+	],
+	"sid": 211598762257966
+}

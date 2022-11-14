@@ -1,0 +1,20 @@
+{
+	"name": "MobileAdvert",
+	"plugin-id": "advert",
+	"sid": 664331863666818,
+	"singleglobal-inst": {
+		"type": "MobileAdvert",
+		"properties": {
+			"test-mode": false,
+			"application-id": "",
+			"ios-application-id": "",
+			"debug-location": "disabled",
+			"show-on-start-up": true,
+			"publisher-id": "",
+			"show-ad-free-option": false,
+			"privacy-policy": "https://sites.google.com/view/loregret/main/games/throwy/privacy-policy",
+			"show-consent": "eu"
+		},
+		"uid": 85
+	}
+}

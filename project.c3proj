@@ -1,0 +1,866 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 31702,
+	"name": "Throwy",
+	"runtime": "c3",
+	"useWorker": "dom",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "advert",
+			"name": "Mobile advert",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "CORDOVAIAP",
+			"name": "Mobile IAP",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Share",
+			"name": "Share",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "water",
+			"name": "Water",
+			"author": "Viktor Korsun",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "grayscale",
+			"name": "Grayscale",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		}
+	],
+	"uniqueId": "rrj2r4z9cj0",
+	"objectTypes": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"ui_aiming_arrow",
+					"ui_hand",
+					"ui_loading",
+					"ui_star_icon",
+					"tween_machine",
+					"ui_replay_button",
+					"strength_bar"
+				],
+				"subfolders": [],
+				"name": "interface"
+			},
+			{
+				"items": [
+					"tile",
+					"dirt_bg",
+					"water"
+				],
+				"subfolders": [],
+				"name": "terrain"
+			},
+			{
+				"items": [
+					"Audio",
+					"Touch",
+					"Keyboard",
+					"Browser",
+					"LocalStorage"
+				],
+				"subfolders": [],
+				"name": "system"
+			},
+			{
+				"items": [
+					"player",
+					"star",
+					"mushroom",
+					"camera",
+					"flag",
+					"decor",
+					"whale",
+					"zone_restart",
+					"box"
+				],
+				"subfolders": [],
+				"name": "elements"
+			},
+			{
+				"items": [
+					"fx_white_circle",
+					"fx_water",
+					"fx_trail"
+				],
+				"subfolders": [],
+				"name": "fx"
+			},
+			{
+				"items": [
+					"TiledBackground"
+				],
+				"subfolders": [],
+				"name": "background"
+			},
+			{
+				"items": [
+					"data"
+				],
+				"subfolders": [],
+				"name": "dictionaries"
+			},
+			{
+				"items": [
+					"ui_button",
+					"ui_logo",
+					"ui_wooden_bg",
+					"ui_circle",
+					"ui_stars",
+					"ui_lock_icon",
+					"ui_black_tilled_background",
+					"ui_menu_button",
+					"ui_text",
+					"ui_menu_black_box",
+					"ui_text_centered",
+					"ui_skip_button"
+				],
+				"subfolders": [],
+				"name": "menu"
+			},
+			{
+				"items": [
+					"MobileAdvert",
+					"MobileIAP"
+				],
+				"subfolders": [],
+				"name": "advertisement"
+			},
+			{
+				"items": [
+					"Share"
+				],
+				"subfolders": [],
+				"name": "services"
+			},
+			{
+				"items": [
+					"SpriteFont_regular",
+					"SpriteFont_yusei_small_outlined"
+				],
+				"subfolders": [],
+				"name": "spritefonts"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"water_object",
+					"timer",
+					"tiles",
+					"physics"
+				],
+				"subfolders": [],
+				"name": "elements"
+			},
+			{
+				"items": [
+					"ui_menu",
+					"ui_menu_parent",
+					"ui_menu_spritefonts",
+					"ui_buttons",
+					"ui_menu_text"
+				],
+				"subfolders": [],
+				"name": "interface"
+			}
+		]
+	},
+	"layouts": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"resource",
+					"loading",
+					"menu"
+				],
+				"subfolders": [],
+				"name": "misc"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"1",
+							"2",
+							"3",
+							"4",
+							"5",
+							"6",
+							"7",
+							"8",
+							"9",
+							"10",
+							"11",
+							"12",
+							"13",
+							"14",
+							"15",
+							"16",
+							"17",
+							"18",
+							"19",
+							"20",
+							"21",
+							"22",
+							"23",
+							"24",
+							"25",
+							"26",
+							"27",
+							"28",
+							"29",
+							"30",
+							"31",
+							"32",
+							"33",
+							"34",
+							"35",
+							"36",
+							"37",
+							"38",
+							"39",
+							"40"
+						],
+						"subfolders": [],
+						"name": "Finished"
+					}
+				],
+				"name": "levels"
+			},
+			{
+				"items": [
+					"test1",
+					"test2",
+					"test3"
+				],
+				"subfolders": [],
+				"name": "test folder"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"#Notes"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"#basic events",
+					"#loading",
+					"#menu"
+				],
+				"subfolders": [],
+				"name": "main"
+			},
+			{
+				"items": [
+					"#functions",
+					"#loader",
+					"#advertisement",
+					"#local storage",
+					"#gameanalytics"
+				],
+				"subfolders": [],
+				"name": "sub"
+			}
+		]
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": [
+				{
+					"items": [],
+					"subfolders": [
+						{
+							"items": [
+								{
+									"name": "impactMetal1.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 170531000505705,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "impactMetal2.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 897924858158263,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "impactMetal3.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 266805706662231,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "impactMetal4.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 239853569956452,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "metal"
+						},
+						{
+							"items": [
+								{
+									"name": "impact1.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 938211351068594,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "impact2.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 798880535646809,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "ground"
+						},
+						{
+							"items": [
+								{
+									"name": "water-fall.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 832662084929530,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "water_impact.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 245018497153411,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "water"
+						}
+					],
+					"name": "impact"
+				},
+				{
+					"items": [
+						{
+							"name": "pop.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 639992824554551,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "jump.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 503408609461148,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "hover.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 740139804814146,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "player"
+				},
+				{
+					"items": [
+						{
+							"name": "star.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 166633723281662,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "mushroom.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 932587606281255,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "elements"
+				},
+				{
+					"items": [
+						{
+							"name": "air pop.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 354595932103097,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "clone.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 313293834198657,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "actions"
+				},
+				{
+					"items": [
+						{
+							"name": "ui-click-1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 654378312303477,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ui-click-2.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 835668010809515,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ui-click-4.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 587262102157902,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ui-click-3.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 854216515193495,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ui-click-0.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 835527863640848,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "click_quad.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 441325574255810,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "win_notification.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 528062286579646,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "win_tone.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 357039646760801,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ui-click-5.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 771847090366814,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ui-button-1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 288921012931297,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "interface"
+				}
+			]
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "YuseiMagic-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 316278944881681,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 888470796113582,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 331003979582117,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 365239471176713,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 871594975763698,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 371769672733171,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 804468239300458,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 302726116727105,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "Hypercasual Platformer.",
+		"version": "0.4.8",
+		"author": "Loregret",
+		"authorEmail": "Loregrets@yahoo.com",
+		"authorWebsite": "loregret.itch.io",
+		"appId": "com.loregret.throwy",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": true,
+		"fullscreenMode": "scale-outer",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "off",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "none",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "file",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "flat"
+	},
+	"viewportWidth": 640,
+	"viewportHeight": 480,
+	"firstLayout": "loading"
+}

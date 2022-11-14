@@ -1,0 +1,40 @@
+{
+	"name": "ui_menu_spritefonts",
+	"plugin-id": "Spritefont2",
+	"sid": 257130338873880,
+	"instanceVariables": [
+		{
+			"name": "pin_group",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 769187477467668
+		},
+		{
+			"name": "ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 349038646499649
+		},
+		{
+			"name": "class",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 432686960402784
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 501572352830922
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"SpriteFont_regular",
+		"SpriteFont_yusei_small_outlined"
+	]
+}

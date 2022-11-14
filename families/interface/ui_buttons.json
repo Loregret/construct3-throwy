@@ -1,0 +1,21 @@
+{
+	"name": "ui_buttons",
+	"plugin-id": "Sprite",
+	"sid": 893223117129818,
+	"instanceVariables": [
+		{
+			"name": "active_at_window",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 762935692829595
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"ui_button",
+		"ui_circle",
+		"ui_menu_button"
+	]
+}

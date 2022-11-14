@@ -1,0 +1,30 @@
+{
+	"name": "ui_text",
+	"plugin-id": "Text",
+	"sid": 656620280748846,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "class",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 458078878622291
+		},
+		{
+			"name": "ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 649832535449000
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 207824928350854
+		}
+	],
+	"effectTypes": []
+}

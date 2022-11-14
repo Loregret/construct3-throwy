@@ -1,0 +1,828 @@
+{
+	"name": "#advertisement",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "advert_is_enabled",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 126933511506784
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Advert",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 814908278059257
+						}
+					],
+					"actions": [],
+					"sid": 931419823387574,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-in-preview",
+									"objectClass": "System",
+									"sid": 413299140969384
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 566201602703749,
+									"parameters": {
+										"group-name": "\"Advert\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 538413471012248
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "data",
+									"sid": 123224050598269,
+									"parameters": {
+										"key": "\"removeads\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "hide-banner",
+									"objectClass": "MobileAdvert",
+									"sid": 664182602197291
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 213698352129691,
+									"parameters": {
+										"group-name": "\"Advert\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 860042355888887
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Advert - create",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "adv_create_banner",
+							"functionDescription": "Displays an advert that partially overlays the bottom of the screen, the size of the advert can be specified when it's created.",
+							"functionCategory": "#advertisement",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "show",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"sid": 263918791726380
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "is-loaded-banner",
+									"objectClass": "MobileAdvert",
+									"sid": 733258760271609,
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 516123973168833,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 612994985646599,
+											"parameters": {
+												"variable": "show"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-banner",
+											"objectClass": "MobileAdvert",
+											"sid": 149016717180706,
+											"parameters": {
+												"advert-id": "\"ca-app-pub-7211497764462638/8283774380\"",
+												"banner-size": "portrait",
+												"show": "true",
+												"position": "bottom"
+											}
+										}
+									],
+									"sid": 130005215947664
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 443876656278880
+										}
+									],
+									"actions": [
+										{
+											"id": "create-banner",
+											"objectClass": "MobileAdvert",
+											"sid": 654652485249554,
+											"parameters": {
+												"advert-id": "\"ca-app-pub-7211497764462638/8283774380\"",
+												"banner-size": "portrait",
+												"show": "false",
+												"position": "bottom"
+											}
+										}
+									],
+									"sid": 418435089007522
+								}
+							]
+						},
+						{
+							"functionName": "adv_create_interstitial",
+							"functionDescription": "Displays a full screen advert, useful for transitioning between layouts.",
+							"functionCategory": "#advertisement",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "show",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"sid": 806352023423726
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "is-loaded-interstitial",
+									"objectClass": "MobileAdvert",
+									"sid": 808774902614446,
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 501021367967904,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 256048734963419,
+											"parameters": {
+												"variable": "show"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-interstitial",
+											"objectClass": "MobileAdvert",
+											"sid": 109505315585420,
+											"parameters": {
+												"advert-id": "\"ca-app-pub-7211497764462638/7281683906\"",
+												"show": "true"
+											}
+										}
+									],
+									"sid": 237140209372049
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 266691855912848
+										}
+									],
+									"actions": [
+										{
+											"id": "create-interstitial",
+											"objectClass": "MobileAdvert",
+											"sid": 875253392588173,
+											"parameters": {
+												"advert-id": "\"ca-app-pub-7211497764462638/7281683906\"",
+												"show": "false"
+											}
+										}
+									],
+									"sid": 137382953376881
+								}
+							]
+						},
+						{
+							"functionName": "adv_create_reward_video",
+							"functionDescription": "Similar to an interstitial advert in that it is a full screen advert. Plays a video that the user can either watch or dismiss. If the user watches the whole video then a reward payload is given.",
+							"functionCategory": "#advertisement",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "show",
+									"type": "boolean",
+									"initialValue": "false",
+									"comment": "",
+									"sid": 579669758775204
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "is-loaded-video",
+									"objectClass": "MobileAdvert",
+									"sid": 514514577224687,
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 561416652702508,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 954615110849600,
+											"parameters": {
+												"variable": "show"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-video",
+											"objectClass": "MobileAdvert",
+											"sid": 661038159412910,
+											"parameters": {
+												"advert-id": "\"ca-app-pub-7211497764462638/4720127412\"",
+												"show": "true"
+											}
+										}
+									],
+									"sid": 431271604033620
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 197982077581635
+										}
+									],
+									"actions": [
+										{
+											"id": "create-video",
+											"objectClass": "MobileAdvert",
+											"sid": 689908455482242,
+											"parameters": {
+												"advert-id": "\"ca-app-pub-7211497764462638/4720127412\"",
+												"show": "false"
+											}
+										}
+									],
+									"sid": 903007314079669
+								}
+							]
+						}
+					],
+					"sid": 976428766967731
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Advert - show",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "adv_show_banner",
+							"functionDescription": "Displays an advert that partially overlays the bottom of the screen, the size of the advert can be specified when it's created.",
+							"functionCategory": "#advertisement",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 349831250037724,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-loaded-banner",
+											"objectClass": "MobileAdvert",
+											"sid": 113054518429034
+										}
+									],
+									"actions": [
+										{
+											"id": "show-banner",
+											"objectClass": "MobileAdvert",
+											"sid": 232203427440888
+										}
+									],
+									"sid": 494758146794880
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 878337516367290
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "adv_create_banner",
+											"sid": 272683355075393,
+											"parameters": [
+												true
+											]
+										}
+									],
+									"sid": 878144556023255
+								}
+							]
+						},
+						{
+							"functionName": "adv_show_interstitial",
+							"functionDescription": "Displays a full screen advert, useful for transitioning between layouts.",
+							"functionCategory": "#advertisement",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 997085529599187,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-loaded-interstitial",
+											"objectClass": "MobileAdvert",
+											"sid": 180211135454788
+										}
+									],
+									"actions": [
+										{
+											"id": "show-interstitial",
+											"objectClass": "MobileAdvert",
+											"sid": 887284002542596
+										}
+									],
+									"sid": 325079864871769
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 423849902587672
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "adv_create_interstitial",
+											"sid": 187045342155745,
+											"parameters": [
+												true
+											]
+										}
+									],
+									"sid": 625357118427393
+								}
+							]
+						},
+						{
+							"functionName": "adv_show_reward_video",
+							"functionDescription": "Similar to an interstitial advert in that it is a full screen advert. Plays a video that the user can either watch or dismiss. If the user watches the whole video then a reward payload is given.",
+							"functionCategory": "#advertisement",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 239204166108515,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-loaded-video",
+											"objectClass": "MobileAdvert",
+											"sid": 618958654405640
+										}
+									],
+									"actions": [
+										{
+											"id": "show-video",
+											"objectClass": "MobileAdvert",
+											"sid": 180944759228014
+										}
+									],
+									"sid": 275936870548646
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 952617283144397
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "adv_create_reward_video",
+											"sid": 549258440000446,
+											"parameters": [
+												true
+											]
+										}
+									],
+									"sid": 947696926022447
+								}
+							]
+						}
+					],
+					"sid": 500067410953090
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Advert - boolean",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-went-offline",
+									"objectClass": "Browser",
+									"sid": 211856916533609
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 382951341506764,
+									"parameters": {
+										"variable": "advert_is_enabled",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 635511409164327
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-video-ready",
+									"objectClass": "MobileAdvert",
+									"sid": 269473023758557
+								},
+								{
+									"id": "on-interstitial-ready",
+									"objectClass": "MobileAdvert",
+									"sid": 126796158566280
+								},
+								{
+									"id": "on-banner-ready",
+									"objectClass": "MobileAdvert",
+									"sid": 968932446422123
+								}
+							],
+							"actions": [],
+							"sid": 383923471922924,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-online",
+											"objectClass": "Browser",
+											"sid": 670716352392065
+										},
+										{
+											"id": "is-loaded-video",
+											"objectClass": "MobileAdvert",
+											"sid": 881189003140165
+										},
+										{
+											"id": "is-loaded-interstitial",
+											"objectClass": "MobileAdvert",
+											"sid": 882559424842130
+										},
+										{
+											"id": "is-loaded-banner",
+											"objectClass": "MobileAdvert",
+											"sid": 248143556171949
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 408329670918132,
+											"parameters": {
+												"variable": "advert_is_enabled",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 149355478579157
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-video-failed-to-load",
+									"objectClass": "MobileAdvert",
+									"sid": 754985331464769
+								},
+								{
+									"id": "on-interstitial-failed-to-load",
+									"objectClass": "MobileAdvert",
+									"sid": 410182761315737
+								},
+								{
+									"id": "on-banner-failed-to-load",
+									"objectClass": "MobileAdvert",
+									"sid": 202300561300846
+								}
+							],
+							"actions": [],
+							"sid": 309143650508271,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 432004112454953,
+											"parameters": {
+												"variable": "advert_is_enabled",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 790886239658532
+								}
+							],
+							"isOrBlock": true
+						}
+					],
+					"sid": 551282536278452
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Advert - misc",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Online"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-went-online",
+									"objectClass": "Browser",
+									"sid": 562859399470510
+								}
+							],
+							"actions": [],
+							"sid": 441811241777530,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-loaded-banner",
+											"objectClass": "MobileAdvert",
+											"sid": 884133142350851,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "adv_create_banner",
+											"sid": 890637867797083,
+											"parameters": [
+												false
+											]
+										}
+									],
+									"sid": 734436610929514
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-loaded-interstitial",
+											"objectClass": "MobileAdvert",
+											"sid": 410410035037295,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "adv_create_interstitial",
+											"sid": 777862255485331,
+											"parameters": [
+												false
+											]
+										}
+									],
+									"sid": 487768176337341
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-loaded-video",
+											"objectClass": "MobileAdvert",
+											"sid": 724338204551191,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "adv_create_reward_video",
+											"sid": 253241060860363,
+											"parameters": [
+												false
+											]
+										}
+									],
+									"sid": 954530272802937
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "banner"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-banner-failed-to-load",
+									"objectClass": "MobileAdvert",
+									"sid": 927127239925938
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "adv_create_banner",
+									"sid": 618262279058202,
+									"parameters": [
+										false
+									]
+								}
+							],
+							"sid": 108277416068107,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "comment",
+							"text": "interstitial"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-interstitial-failed-to-load",
+									"objectClass": "MobileAdvert",
+									"sid": 803386168977679
+								},
+								{
+									"id": "on-interstitial-cancelled",
+									"objectClass": "MobileAdvert",
+									"sid": 161592293098098
+								},
+								{
+									"id": "on-interstitial-complete",
+									"objectClass": "MobileAdvert",
+									"sid": 224964063688509
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "adv_create_interstitial",
+									"sid": 354357963791556,
+									"parameters": [
+										false
+									]
+								}
+							],
+							"sid": 919871216649728,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "comment",
+							"text": "video"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-video-failed-to-load",
+									"objectClass": "MobileAdvert",
+									"sid": 266847497397666
+								},
+								{
+									"id": "on-video-complete",
+									"objectClass": "MobileAdvert",
+									"sid": 536935223283082
+								},
+								{
+									"id": "on-video-cancelled",
+									"objectClass": "MobileAdvert",
+									"sid": 969940328126354
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "adv_create_reward_video",
+									"sid": 399800571107261,
+									"parameters": [
+										false
+									]
+								}
+							],
+							"sid": 371316825709350,
+							"isOrBlock": true
+						}
+					],
+					"sid": 738678800585683
+				}
+			],
+			"sid": 632216579707471
+		}
+	],
+	"sid": 845814175405397
+}

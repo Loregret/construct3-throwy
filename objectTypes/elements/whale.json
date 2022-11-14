@@ -1,0 +1,78 @@
+{
+	"name": "whale",
+	"plugin-id": "Sprite",
+	"sid": 647809506022613,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Movement",
+			"sid": 753230597777375
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "SizeEffect",
+			"sid": 360198333436679
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "AngleEffect",
+			"sid": 948403242796451
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 168021584141912
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 74,
+						"height": 82,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6536974,
+						"collisionPoly": {
+							"points": [
+								0.14074844074844076,
+								0.12737127371273713,
+								0.5,
+								0.12059620596205962,
+								0.8517671517671519,
+								0.12737127371273713,
+								0.9715176715176715,
+								0.5,
+								0.8367983367983367,
+								0.8523035230352303,
+								0.5,
+								0.981029810298103,
+								0.15571725571725573,
+								0.8523035230352303,
+								0.020997920997921,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 5
+					}
+				],
+				"sid": 790856127439770,
+				"name": "Whale",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

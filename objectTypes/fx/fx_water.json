@@ -1,0 +1,26 @@
+{
+	"name": "fx_water",
+	"plugin-id": "Particles",
+	"sid": 286671235859747,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 351510516465342
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 7,
+		"height": 7,
+		"originX": 1.8571428571428572,
+		"originY": 4.857142857142857,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9566851,
+		"useCollisionPoly": true
+	}
+}

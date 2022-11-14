@@ -1,0 +1,11 @@
+{
+	"name": "tiles",
+	"plugin-id": "Sprite",
+	"sid": 228278578789001,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"tile"
+	]
+}

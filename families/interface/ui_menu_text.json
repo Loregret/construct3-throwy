@@ -1,0 +1,31 @@
+{
+	"name": "ui_menu_text",
+	"plugin-id": "Text",
+	"sid": 381615687719933,
+	"instanceVariables": [
+		{
+			"name": "pin_group",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 840781705660326
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 247474660132642
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 294396165378955
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"ui_text",
+		"ui_text_centered"
+	]
+}

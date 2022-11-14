@@ -1,0 +1,25 @@
+{
+	"name": "physics",
+	"plugin-id": "Sprite",
+	"sid": 836665216135458,
+	"instanceVariables": [
+		{
+			"name": "impactSound",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 699603806713967
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 870343803755317
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"box"
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"name": "timer",
+	"plugin-id": "Sprite",
+	"sid": 430593058360600,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 920417102310598
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"player",
+		"camera",
+		"ui_logo"
+	]
+}

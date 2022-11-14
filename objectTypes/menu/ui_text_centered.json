@@ -1,0 +1,30 @@
+{
+	"name": "ui_text_centered",
+	"plugin-id": "Text",
+	"sid": 731179457492976,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "class",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 315875227243322
+		},
+		{
+			"name": "ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 856546566900843
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 133502288645622
+		}
+	],
+	"effectTypes": []
+}
