@@ -1,4 +1,4 @@
-# construct3-throwy
+# Throwy
 Hyper-casual game made with Construct 3.
 
 ![GIF](https://img.itch.zone/aW1hZ2UvMTEwMjY4Ny82MzgzNzkwLmdpZg==/original/fPK4%2F3.gif)
